@@ -1,0 +1,19 @@
+ja: 
+  activerecord: 
+    models: 
+      employee: "従業員" 
+
+    attributes: 
+      employee: 
+        yomi: "フリガナ"  
+        name: "名前"  
+        zipcode: "郵便番号"  
+        address: "住所"  
+        phone: "電話番号"  
+        birthday: "生年月日"  
+        join_on: "入店月日" 
+        leave_on: "退店月日" 
+        branch: "所属店舗" 
+        role: "役職" 
+        isurance_grade: "団体保険種別"
+

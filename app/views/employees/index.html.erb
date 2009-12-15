@@ -1,8 +1,9 @@
 <h1>Listing employees</h1>
 
+<% scope = %w[activerecord attributes employee] -%>
 <table>
   <tr>
-    <th>Yomi</th>
+		<th><%= t(:yomi, :scope => scope) %></th>
     <th>Name</th>
     <th>Zipcode</th>
     <th>Address</th>
@@ -37,4 +38,4 @@
 
 <br />
 
-<%= link_to 'New employee', new_employee_path %>
+<%= link_to '新規従業員の登録', new_employee_path %>

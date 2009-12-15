@@ -1,55 +1,44 @@
-<h1>New employee</h1>
+<h1>新規従業員の登録</h1>
 
+<% scope = %w[activerecord attributes employee] -%>
 <% form_for(@employee) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :yomi %><br />
+	<%= f.label :yomi, t(:yomi, :scope => scope) %><br />
     <%= f.text_field :yomi %>
   </p>
   <p>
-    <%= f.label :name %><br />
+	<%= f.label :name, t(:name, :scope => scope) %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :zipcode %><br />
+	<%= f.label :zipcode, t(:zipcode, :scope => scope) %><br />
     <%= f.text_field :zipcode %>
   </p>
   <p>
-    <%= f.label :address %><br />
+	<%= f.label :address, t(:address, :scope => scope) %><br />
     <%= f.text_field :address %>
   </p>
   <p>
-    <%= f.label :phone %><br />
+	<%= f.label :phone, t(:phone, :scope => scope) %><br />
     <%= f.text_field :phone %>
   </p>
   <p>
-    <%= f.label :birthday %><br />
-    <%= f.date_select :birthday %>
+	<%= f.label :birthday, t(:birthday, :scope => scope) %><br />
+	<%= f.date_select :birthday, :start_year => 1950, :use_month_numbers => true %>
   </p>
   <p>
-    <%= f.label :join_on %><br />
-    <%= f.date_select :join_on %>
+	<%= f.label :branch, t(:branch, :scope => scope) %><br />
+    <%= f.select :branch, ["ルートイン釧路支店", "釧路工業技術センター支店"] %>
   </p>
   <p>
-    <%= f.label :leave_on %><br />
-    <%= f.date_select :leave_on %>
+	<%= f.label :role, t(:role, :scope => scope) %><br />
+    <%= f.select :role, ["パート", "配達員"] %>
   </p>
   <p>
-    <%= f.label :branch %><br />
-    <%= f.text_field :branch %>
-  </p>
-  <p>
-    <%= f.label :role %><br />
-    <%= f.text_field :role %>
-  </p>
-  <p>
-    <%= f.label :isurance_grade %><br />
-    <%= f.text_field :isurance_grade %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit '登録' %>
   </p>
 <% end %>
 
-<%= link_to 'Back', employees_path %>
+<%= link_to '戻る', employees_path %>
