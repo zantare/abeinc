@@ -1,0 +1,56 @@
+<h1>Editing employee</h1>
+
+<% form_for(@employee) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :yomi %><br />
+    <%= f.text_field :yomi %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :zipcode %><br />
+    <%= f.text_field :zipcode %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :birthday %><br />
+    <%= f.date_select :birthday %>
+  </p>
+  <p>
+    <%= f.label :join_on %><br />
+    <%= f.date_select :join_on %>
+  </p>
+  <p>
+    <%= f.label :leave_on %><br />
+    <%= f.date_select :leave_on %>
+  </p>
+  <p>
+    <%= f.label :branch %><br />
+    <%= f.text_field :branch %>
+  </p>
+  <p>
+    <%= f.label :role %><br />
+    <%= f.text_field :role %>
+  </p>
+  <p>
+    <%= f.label :isurance_grade %><br />
+    <%= f.text_field :isurance_grade %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @employee %> |
+<%= link_to 'Back', employees_path %>

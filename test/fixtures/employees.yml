@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  yomi: MyString
+  name: MyString
+  zipcode: MyString
+  address: MyString
+  phone: MyString
+  birthday: 2009-12-15
+  join_on: 2009-12-15
+  leave_on: 2009-12-15
+  branch: MyString
+  role: MyString
+  isurance_grade: MyString
+
+two:
+  yomi: MyString
+  name: MyString
+  zipcode: MyString
+  address: MyString
+  phone: MyString
+  birthday: 2009-12-15
+  join_on: 2009-12-15
+  leave_on: 2009-12-15
+  branch: MyString
+  role: MyString
+  isurance_grade: MyString
